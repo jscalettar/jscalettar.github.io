@@ -1,0 +1,479 @@
+/* Lighter blue: #4acaa8 Darker blue: #00746b */
+
+/*Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
+/*Style*/
+*{
+	padding: 0px;
+    margin: 0px;
+	box-sizing: border-box;
+}
+
+body { 
+	font-size: 1.05em;
+	line-height: 1.25em;
+	font-family: Helvetica Neue, Helvetica, Arial;
+	background: #ffffff;
+	color: #555;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #00746b;
+}
+
+logo-name {
+	display: inline-block;
+	float: left;
+	padding-top: 30px;
+	padding-left: 20px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.img-header{
+	width: 100%;
+	overflow: hidden;
+	filter: brightness(75%);
+}
+
+.crop {
+	width: 100%;
+    object-fit: cover;
+    position: 50% 50%;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+	font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-profile {
+	width: 80%;
+	display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profile-image{
+	text-align:center;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0);
+	//background: #000;
+	width: 100%;
+	height: 76px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	//border-bottom: 4px solid #4acaa8;
+	z-index: 100;
+}
+
+#logo{
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: url(../img/squirrel_logo.png) no-repeat center;
+	display: block;
+}
+
+nav {
+	float: right;
+	padding: 20px;	
+}
+
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #4acaa8 url(../img/menu-icon.png) center;
+}
+
+a:hover#menu-icon {
+	background-color: #00746b;
+	border-radius: 4px 4px 0 0;
+}
+
+#header ul {
+	list-style: none;
+}
+
+#header li {
+	display: inline-block;
+	float: left;
+	padding: 10px
+}
+
+.current {
+	color: #4acaa8;
+}
+
+section {
+	/*margin: 80px auto 40px;
+	max-width: 980px;*/
+	max-width: 100%;
+	max-height: 100%;
+	position: relative;
+}
+
+#projects ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#projects li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #4acaa8;
+    color: #ffffff;
+	font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 4px;
+}
+
+#projects li a {
+	display: block;
+}
+
+#projects li a:hover {
+	color: #b2b2b2;
+}
+
+#projects li:hover {
+    background-color: #00746b;
+}
+
+/*Initial value for scaling images to height of screen*/
+.scale_images {
+	width: auto;
+	height: 500px;
+	max-width: 100%;
+}
+
+.center_slides {
+	display: flex;
+	justify-content: center; /*align horizontal*/
+	/*align-items: center; /*align vertical*/
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+	padding-top: 30px;
+    background-color: #222;
+	color: #4acaa8;
+	text-align: center;
+	font-size: 2em;
+    overflow:hidden;
+}
+
+#footer li{
+	display: inline;
+	padding: 0px 10px;
+}
+
+h1 {
+	font-size: 2em;
+	color: #fff;
+	line-height: 1.15em;
+}
+
+h2 {
+	font-size: 2em;
+	color: #333;
+	line-height: 1.15em;
+}
+
+h3 {
+	font-size: 1.25em;
+	color: #333;
+	line-height: 1.15em;
+}
+
+p {
+	line-height: 1.45em;
+	margin-bottom: 20px;
+}
+
+p2 {
+	line-height: 1.45em;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    /*border: 3px solid #73AD21;
+    padding: 10px;*/
+}
+
+/* for skills page: */
+.center-text {
+	margin: auto;
+	width: 200px;
+}
+
+/*Slideshow*/
+.mySlides {
+	display: none;
+}
+
+.demo {
+	cursor: pointer;
+}
+
+.button_center{
+	text-align: center;
+}
+
+.button {
+    background-color: #4acaa8;
+    border: none;
+    color: white;
+    padding: 8px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.w3-left, .w3-right, .w3-badge {
+	cursor: pointer;
+}
+
+.w3-badge {
+	height: 13px;
+	width: 13px;
+	padding: 0;
+}
+
+/* for contact form: */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+	color: #777;
+}
+
+button[type=submit] {
+    background-color: #4acaa8;
+    color: white;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 4px;
+	font-size: 20px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #00746b;
+}
+
+/*input[type=submit] {
+    background-color: #4acaa8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #00746b;
+}*/
+
+.contact-box {
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+}
+
+@media only screen and (max-width : 720px) {
+    /*header navigation to icon*/
+	header {
+		position: absolute;
+	}
+
+	#menu-icon {
+		display:inline-block;
+	}
+
+	nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		//padding: 20px;
+		background: #000;
+		border: 5px solid #4acaa8;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
+}
+
+
+@media only screen and (max-width : 705px) {
+    /*Toggles Navigation Image*/
+	header {
+		position: absolute;
+	}
+
+	#menu-icon {
+		display:inline-block;
+	}
+
+	nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #000;
+		border: 5px solid #4acaa8;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
+}
+
+@media only screen and (max-width : 700px) {	
+	/*Dynamically resize header font*/
+	h1 {
+		font-size: 10vw;
+		color: #fff;
+		line-height: 1.15em;
+	}
+}
+
+@media only screen and (max-width : 600px) {
+	/*Dynamically resize page text box*/
+	.center {
+		margin: auto;
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width : 800px) {
+	/*Adjust skills columns*/
+	.column {
+		float: none;
+		width: 100%;
+		padding: none;
+	}
+	
+	.center-text {
+		margin: 0;
+		width: 200px;
+	}
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
